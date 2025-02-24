@@ -29,11 +29,11 @@ let package = Package(
         ],
         targets: [
             .target(name: "Starscream",
-                    dependencies: ["CNIOExtrasZlib"],
+                    dependencies: ["zlib"],
                     path: "Sources",
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
             .target(
-                name: "CNIOExtrasZlib",
+                name: "zlib",
                 path: "CNIOExtrasZlib",
                 linkerSettings: [
                     .linkedLibrary("z")
