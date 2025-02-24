@@ -27,9 +27,15 @@ let package = Package(
         products: [
             .library(name: "Starscream", targets: ["Starscream"])
         ],
+        dependencies: [
+            .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" ..< "4.0.0")
+        ],
         targets: [
             .target(name: "Starscream",
-                    dependencies: ["zlib"],
+                    dependencies: [
+                        "zlib",
+                        .product(name: "CommonCrypto", package: "Crypto")
+                    ],
                     path: "Sources",
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
             .target(
