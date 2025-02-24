@@ -28,11 +28,18 @@ let package = Package(
             .library(name: "Starscream", targets: ["Starscream"])
         ],
         dependencies: [
-            .package(url: "https://github.com/apple/swift-nio-zlib-support.git", from: "1.0.0")
+            "CNIOExtrasZlib"
         ],
         targets: [
             .target(name: "Starscream",
                     path: "Sources",
-                    resources: [.copy("PrivacyInfo.xcprivacy")])
+                    resources: [.copy("PrivacyInfo.xcprivacy")]),
+            .target(
+                name: "CNIOExtrasZlib",
+                path: "CNIOExtrasZlib",
+                linkerSettings: [
+                    .linkedLibrary("z")
+                ]
+            )
         ]
 )
