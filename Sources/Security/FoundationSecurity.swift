@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
-import CommonCrypto
+import Crypto
 
 public enum FoundationSecurityError: Error {
     case invalidRequest
