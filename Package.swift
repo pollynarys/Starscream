@@ -27,12 +27,10 @@ let package = Package(
         products: [
             .library(name: "Starscream", targets: ["Starscream"])
         ],
-        dependencies: [
-            "CNIOExtrasZlib"
-        ],
         targets: [
             .target(name: "Starscream",
                     path: "Sources",
+                    dependencies: ["CNIOExtrasZlib"],
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
             .target(
                 name: "CNIOExtrasZlib",
