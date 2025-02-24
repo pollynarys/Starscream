@@ -21,9 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
-#if canImport(FoundationNetworking)
 import FoundationNetworking
-#endif
 
 public protocol EngineDelegate: AnyObject {
     func didReceive(event: WebSocketEvent)
