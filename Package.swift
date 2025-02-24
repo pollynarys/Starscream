@@ -29,14 +29,14 @@ let package = Package(
         ],
         dependencies: [
             .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" ..< "4.0.0"),
-            .package(url: "https://github.com/swiftlang/swift-corelibs-foundation", .branch("release/6.0.2")),
+            //.package(url: "https://github.com/swiftlang/swift-corelibs-foundation", .branch("release/6.0.2")),
         ],
         targets: [
             .target(name: "Starscream",
                     dependencies: [
                         "zlib",
                         .product(name: "Crypto", package: "swift-crypto"),
-                        .product(name: "Foundation", package: "swift-corelibs-foundation")
+                        //.product(name: "Foundation", package: "swift-corelibs-foundation")
                     ],
                     path: "Sources",
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
