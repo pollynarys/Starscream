@@ -29,8 +29,8 @@ let package = Package(
         ],
         targets: [
             .target(name: "Starscream",
-                    path: "Sources",
                     dependencies: ["CNIOExtrasZlib"],
+                    path: "Sources",
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
             .target(
                 name: "CNIOExtrasZlib",
