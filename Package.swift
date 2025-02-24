@@ -34,7 +34,7 @@ let package = Package(
             .target(name: "Starscream",
                     dependencies: [
                         "zlib",
-                        .product(name: "CommonCrypto", package: "swift-crypto")
+                        .product(name: "Crypto", package: "swift-crypto")
                     ],
                     path: "Sources",
                     resources: [.copy("PrivacyInfo.xcprivacy")]),
