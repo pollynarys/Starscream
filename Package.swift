@@ -29,7 +29,7 @@ let package = Package(
         ],
         dependencies: [
             .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" ..< "4.0.0"),
-            .package(url: "https://github.com/swiftlang/swift-corelibs-foundation", from: "6.0.3"),
+            .package(url: "https://github.com/swiftlang/swift-corelibs-foundation", .branch("release/6.0.2")),
         ],
         targets: [
             .target(name: "Starscream",
